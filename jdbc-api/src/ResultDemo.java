@@ -14,8 +14,10 @@ public class ResultDemo {
 			
 			ResultSet rs = stmt.executeQuery(sql);
 			
+			System.out.println("Name\tAge\tCity");
+			
 			while(rs.next())
-				System.out.println(rs.getString(1) + "\t" + rs.getInt("age") + "\t" + rs.getString(3));
+				System.out.println(rs.getString(1) + "\t" + rs.getString("age") + "\t" + rs.getString(3));
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
