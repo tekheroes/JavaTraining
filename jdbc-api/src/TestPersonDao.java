@@ -10,13 +10,16 @@ public class TestPersonDao {
 		
 		PersonDao dao = new PersonDaoImpl();
 		
-		Person p1 = new Person("Mike", 32, "Reston");
-		dao.save(p1);
+//		Person p1 = new Person("Mike", 32, "Reston");
+//		dao.save(p1);
+//		
+//		Person p2 = dao.fetch("Polo");
+//		System.out.println(p2);
+//		
+//		List<Person> people = dao.list();
+//		people.forEach(System.out::println);
 		
-		Person p2 = dao.fetch("Polo");
-		System.out.println(p2);
+		dao.remove("Mike");
 		
-		List<Person> people = dao.list();
-		people.forEach(System.out::println);
 	}
 }

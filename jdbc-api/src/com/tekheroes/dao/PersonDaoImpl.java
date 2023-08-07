@@ -74,4 +74,17 @@ public class PersonDaoImpl implements PersonDao {
 			return null;
 		}
 	}
+
+	@Override
+	public void remove(String name) {
+		String sql = "DELETE FROM person WHERE name='" + name + "'";
+		
+		try {
+			Connection conn = JdbcFactory.getConnection();
+			Statement stmt = conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

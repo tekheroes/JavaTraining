@@ -11,4 +11,6 @@ public interface PersonDao {
 	Person fetch(String name);
 	
 	List<Person> list();
+	
+	void remove(String name);
 }
