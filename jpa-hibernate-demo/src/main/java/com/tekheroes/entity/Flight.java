@@ -16,9 +16,9 @@ public class Flight {
 	private int code;
 	@Column(length = 20)
 	private String carrier;
-	@Column(name = "kaha_se", length = 20)
+	@Column(name = "source", length = 20)
 	private String source;
-	@Column(name = "kaha_tak", length = 20)
+	@Column(name = "destination", length = 20)
 	private String destiny;
 	
 	public Flight() {

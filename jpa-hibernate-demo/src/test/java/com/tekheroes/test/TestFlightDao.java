@@ -41,7 +41,7 @@ public class TestFlightDao {
 	}
 	
 	@Test
-	public void testListByDestiny() {
+	public void testCount() {
 		int count = dao.count();
 		System.out.println("Total Flights: " + count);
 	}

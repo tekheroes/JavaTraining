@@ -64,7 +64,7 @@ public class FlightDao {
 	public int count() {
 		EntityManager em = factory.createEntityManager();
 		
-//		Query query = em.createQuery("from Flight where destiny=:dest");
+//		Query query = em.createQuery("SELECT count(*) FROM Flight");
 		Query query = em.createNativeQuery("select count(*) from flight");
 		
 		return ((BigInteger)query.getSingleResult()).intValue();

@@ -12,7 +12,7 @@
             <property name="javax.persistence.jdbc.user" value="zubair" />
             <property name="javax.persistence.jdbc.password" value="oracle" />
             
-            <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
        </properties>

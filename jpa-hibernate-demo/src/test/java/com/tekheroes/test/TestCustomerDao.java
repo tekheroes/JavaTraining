@@ -1,6 +1,9 @@
 package com.tekheroes.test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -27,5 +30,17 @@ public class TestCustomerDao {
 		Customer c = dao.fetch(121);
 		assertNotNull(c);
 		System.out.println(c);
+	}
+	
+	@Test
+	public void testList() {
+		List<Customer> customers = dao.list();
+		assertEquals(3, customers.size());
+		customers.forEach(System.out::println);
+	}
+	
+	@Test
+	public void testDelete() {
+		
 	}
 }

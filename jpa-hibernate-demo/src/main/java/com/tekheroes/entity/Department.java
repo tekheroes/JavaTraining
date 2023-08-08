@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dept")
+@Table(name = "depts")
 public class Department {
 	@Id
 	@Column(name = "dept_no")
@@ -19,7 +19,7 @@ public class Department {
 	@Column(name = "dname", length = 12)
 	private String deptName;
 	
-	@OneToMany(mappedBy = "dept", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+	@OneToMany(mappedBy = "dept", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
 	private List<Employee> emps;
 	
 	// Constructors
