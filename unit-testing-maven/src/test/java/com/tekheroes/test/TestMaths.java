@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import com.tekheroes.Maths;
 
 public class TestMaths {
-private Maths maths;
+	private Maths maths;
 	
 	@BeforeEach
 	public void init() {
