@@ -1,5 +1,8 @@
 package ax6;
 
+import org.springframework.stereotype.Component;
+
+@Component("ukp")
 public class Pound implements Currency {
 
 	@Override

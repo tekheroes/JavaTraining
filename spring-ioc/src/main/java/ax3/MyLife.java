@@ -17,8 +17,8 @@ public class MyLife {
 ////	@Qualifier("sms")
 //	private Message msg;
 
-	@Autowired
-	private MessageProcessor mp;
+//	@Autowired
+//	private MessageProcessor mp;
 	
 	public MyLife() {
 		System.out.println("MyLife Constructor");

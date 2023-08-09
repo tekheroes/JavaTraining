@@ -8,7 +8,7 @@ public class TestStock {
 
 	@Test
 	public void testStock() {
-		ApplicationContext appCtx = new ClassPathXmlApplicationContext("ex2ctx.xml");
+		ApplicationContext appCtx = new ClassPathXmlApplicationContext("appctx.xml");
 		
 		Stock s1 = (Stock) appCtx.getBean("stk");
 		

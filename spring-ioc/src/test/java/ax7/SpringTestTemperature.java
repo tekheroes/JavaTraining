@@ -20,16 +20,12 @@ public class SpringTestTemperature {
 
 	@Test
 	public void testFtoc() {
-//		TemperatureConverter tc = (TemperatureConverter) ctx.getBean("temp");
-
 		int c = tc.ftoc(102);
 		Assertions.assertEquals(38, c);
 	}
 
 	@Test
 	public void testCtof() {
-//		TemperatureConverter tc = (TemperatureConverter) ctx.getBean("temp");
-
 		int f = tc.ctof(36);
 		Assertions.assertEquals(96, f);
 	}
