@@ -4,11 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
-@Getter @Setter
 public class Flight {
 	@Id
 	private int code;
@@ -17,6 +13,33 @@ public class Flight {
 	@Column(name = "source", length = 20)
 	private String source;
 	@Column(name = "destination", length = 20)
-	private String destiny;
+	private String destination;
 	
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
+	
+	public String getCarrier() {
+		return carrier;
+	}
+	public void setCarrier(String carrier) {
+		this.carrier = carrier;
+	}
+	
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
+	
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
 }

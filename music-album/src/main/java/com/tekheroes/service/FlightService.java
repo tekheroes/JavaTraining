@@ -15,4 +15,6 @@ public interface FlightService {
 	List<Flight> byCarrier(String carrier);
 	
 	List<Flight> byRoute(String source, String destiny);
+	
+	void remove(int code);
 }

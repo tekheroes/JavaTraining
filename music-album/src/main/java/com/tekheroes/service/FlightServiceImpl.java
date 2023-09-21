@@ -39,4 +39,9 @@ public class FlightServiceImpl implements FlightService {
 	public List<Flight> byRoute(String source, String destiny) {
 		return repo.findByRoute(source, destiny);
 	}
+
+	@Override
+	public void remove(int code) {
+		this.repo.deleteById(code);
+	}
 }

@@ -11,8 +11,8 @@ public interface FlightRepository extends JpaRepository<Flight, Integer> {
 
 	List<Flight> findByCarrier(String carrier);
 	
-//	List<Flight> findBySourceAndDestiny(String source, String destiny);
+//	List<Flight> findBySourceAndDestination(String source, String destiny);
 	
-	@Query(value = "FROM Flight WHERE source=:src AND destiny=:dest")
+	@Query(value = "FROM Flight WHERE source=:src AND destination=:dest")
 	List<Flight> findByRoute(String src, String dest);
 }
