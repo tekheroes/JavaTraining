@@ -28,4 +28,9 @@ public class CustomerServiceImpl implements CustomerService {
 	public List<Customer> list() {
 		return repo.findAll();
 	}
+
+	@Override
+	public Customer authenticate(String phone, String password) {
+		return repo.findByPhoneAndPassword(phone, password);
+	}
 }

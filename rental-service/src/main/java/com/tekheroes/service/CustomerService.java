@@ -11,4 +11,6 @@ public interface CustomerService {
 	Customer find(int custId);
 	
 	List<Customer> list();
+	
+	Customer authenticate(String phone, String password);
 }

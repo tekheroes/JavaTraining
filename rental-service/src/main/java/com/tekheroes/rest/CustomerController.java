@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tekheroes.entity.Customer;
@@ -36,5 +37,10 @@ public class CustomerController {
 	@GetMapping(value = "/all", produces = "application/json")
 	public List<Customer> list() {
 		return service.list();
+	}
+	
+	@GetMapping(value = "/auth", produces = "application/json")
+	public Customer authenticate(@RequestParam String phone, @RequestParam String password) {
+		return service.authenticate(phone, password);
 	}
 }

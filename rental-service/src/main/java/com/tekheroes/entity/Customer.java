@@ -15,6 +15,7 @@ public class Customer {
 	private int custId;
 	private String name;
 	private String phone;
+	private String password;
 	private String licenseNo;
 	
 	@JsonManagedReference
@@ -60,6 +61,13 @@ public class Customer {
 	public void setInvoices(List<Invoice> invoices) {
 		this.invoices = invoices;
 	}
-	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	
 }
