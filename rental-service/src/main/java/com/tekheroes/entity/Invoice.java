@@ -3,6 +3,7 @@ package com.tekheroes.entity;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -10,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Invoice {
@@ -20,14 +20,14 @@ public class Invoice {
 	private LocalDate hireDate;
 	private int days;
 	private double total;
+	private boolean returned;
 	
 	@JsonBackReference
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "custId")
 	private Customer customer;
 	
-	@JsonManagedReference
-	@OneToOne
+	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "regNo")
 	private Vehicle vehicle;
 
@@ -78,6 +78,12 @@ public class Invoice {
 	public void setVehicle(Vehicle vehicle) {
 		this.vehicle = vehicle;
 	}
-	
+
+	public boolean isReturned() {
+		return returned;
+	}
+	public void setReturned(boolean returned) {
+		this.returned = returned;
+	}
 	
 }

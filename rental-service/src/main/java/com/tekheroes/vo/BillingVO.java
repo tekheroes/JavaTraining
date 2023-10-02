@@ -2,14 +2,12 @@ package com.tekheroes.vo;
 
 import java.time.LocalDate;
 
-import lombok.Getter;
-import lombok.Setter;
-
 public class BillingVO {
 	private LocalDate hireDate;
 	private int days;
 	private int custId;
 	private String regNo;
+	
 	public LocalDate getHireDate() {
 		return hireDate;
 	}

@@ -32,6 +32,7 @@ public class BillingServiceImpl implements BillingService {
 		invoice.setHireDate(vo.getHireDate());
 		invoice.setDays(vo.getDays());
 		invoice.setTotal(vo.getDays() * veh.getRate());
+		invoice.setReturned(false);
 		veh.setAvailable(false);
 		invoice.setCustomer(cust);
 		invoice.setVehicle(veh);
@@ -42,8 +43,10 @@ public class BillingServiceImpl implements BillingService {
 	@Override
 	public void returnCar(int id) {
 		Invoice invoice = repo.findById(id).get();
+		invoice.setReturned(true);
 		Vehicle veh = invoice.getVehicle();
 		veh.setAvailable(true);
+		vehicleService.add(veh);
 	}
 
 	@Override
